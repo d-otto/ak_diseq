@@ -56,8 +56,8 @@ class glacierData:
         self.rgi.insert(0, 'tau', np.array(-self.rgi.hf / self.rgi.bt, ndmin=2, dtype='float').reshape(1,
                                                                                                        -1).flatten())  # response time
         # filter crazy large tau for small glaciers
-        mask = self.rgi.tau / self.rgi.Area > 200
-        self.rgi = self.rgi.loc[~mask]
+        mask = (self.rgi.tau / self.rgi.Area < 200) & (self.rgi.hf > 0)
+        self.rgi = self.rgi.loc[mask]
 
     def calc_diseq(self, t=140):
         # disequilibrium 3-stage
