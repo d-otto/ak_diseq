@@ -1,0 +1,28 @@
+[project]
+name = "ak_diseq"
+version = "0.0.0"
+description = ""
+authors = [
+    {name = "Daniel Otto", email = "drotto@uw.edu"}
+]
+license = {text = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "xarray",
+    "tqdm",
+    "pandas",
+    "dill",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src/"]
+
+[tool.pytest.ini_options]
+pythonpath = "src/"

@@ -1,3 +1,17 @@
+# ak_diseq specific ignores
+data/farinotti/surface_DEMs_RGI60
+data/farinotti/composite_thickness_RGI60
+data/RGI01_flowlines
+data/DOI-WGMS-FoG-2020-08/
+data/mb
+data/millan/RGI-1
+data/rgi60
+data/zeller
+src/scripts/extract_farinotti_thickness/qc
+src/scripts/extract_millan_thickness/qc
+src/scripts/extract_flowline_elevations/qc
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
